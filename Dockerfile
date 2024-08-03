@@ -20,9 +20,7 @@ RUN python -m venv /py && \
     adduser \
         --disabled-password \
         --no-create-home \
-        django-user && \
-    echo "PATH during build: $PATH" && \
-    /py/bin/flake8 --version
+        django-user 
 
 ENV PATH="/py/bin:$PATH"
 
